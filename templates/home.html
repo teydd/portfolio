@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="{{url_for('static',filename='images/teddy.jpg')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/styles.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+</head>
+
+<body class="bg-light">
+    <div class="container-lg bg-white">
+        <div class="row">
+            <div class="navbar navbar-brand col-sm-4 col-md-5">
+                <a class="text-decoration-none fw-bold text-black" href="/"><img class="img-fluid rounded-pill my-2"
+                        src="{{url_for('static',filename='images/teddy.jpg')}}" alt="home" width="70px">Developer
+                    Teddy</a>
+            </div>
+                <div class="col-sm-4 col-md-6 my-4 justify-content-between">
+                    <nav class="navbar navbar-expand-sm ">
+                        <button class=" btn btn-outline-info btn-sm navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+
+                        <div class="collapse navbar-collapse mx-3" id="menu">
+                            <ul class="navbar-nav fw-bold fs-5">
+                                <li class="nav-item">
+                                    <a href="#home" class="nav-link">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#about" class="nav-link">ABOUT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#projects" class="nav-link">PROJECTS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#contact" class="nav-link">CONTACT</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+        </div>
+    </div>
+
+<section id="home" class="py-5 container-lg">
+    <div class="bg-white row justify-content-center">
+        <div class="col-sm-4 col-md-5 text-md-start align-items-center">
+            <h1>
+                <div class="display-1 fw-bold">Hi! I'm Teddy</div>
+                <div class="display-1 fw-bold text-info">A FullStack Web Developer</div>
+            </h1>
+            <i><p class="text-muted fw-bold lead">I specialize in building web applications.</p></i>
+            <i><p class="text-muted fw-bol lead">Scroll down to see that i have been working on</p></i>
+            <a href="#about" class="btn btn-outline-info btn-lg m-3">Learn More<i class="bi bi-person-raised-hand"></i></a>
+            <a href="#projects" class="btn btn-outline-info btn-lg m-3">View My Work <i class="bi bi-search" style="font-size: large;"></i>
+            </a>
+        </div>
+        <div class="col-sm-4 col-md-6">
+            <img class="img-fluid rounded-pill" src="{{url_for('static',filename='images/teddy.jpg')}}" alt="teddy">
+        </div>
+    </div>    
+</section>
+
+    <section id="about">
+        <div class="text-center bg-white">
+            <h1>ABOUT</h1>
+            <p class="lead text-muted">A Freelance web Developer who builds elegant, fast and scalable web applications</p>
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <div>
+                        <i class="bi bi-palette text-info" style="font-size:xx-large;"></i>
+                        <h3>Design</h3>
+                        <p class="lead">I create beautiful and modern design Websites .</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <i class="bi bi-code text-info" style="font-size: xx-large;"></i>
+                    <h3>Development</h3>
+                    <p class="lead">Development of responsive, scalable and fast web applications using the best standards and coding practises</p>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <i class="bi bi-tools text-info" style="font-size: xx-large;"></i>
+                    <h3>Maintenance</h3>
+                    <p class="lead">Once done with the development, I will guide you in the maintenance process</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+    <div class="container-lg bg-white mt-5">
+        <h3 class="text-center">PROJECTS</h3>
+        <p class="lead text-center">View some of my latest projects</p>
+        
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <div class="card border-info">
+                    <img class="img-fluid" src="{{url_for('static',filename='images/samurai.png')}}" alt="">
+                    <div class="card-header">
+                        <h4>AfroSamurai</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="badge bg-info rounded-pill">Python</p>
+                        <p class="badge bg-info rounded-pill">Flask</p>
+                        <p class="badge bg-info rounded-pill">Bootstrap</p>
+                        <p class="badge bg-info rounded-pill">JavaScript</p>
+                        <div class="card-footer">
+                            <a class="text-decoration-none text-secondary" href="https://github.com/teydd/web" target="_blank">Source Code<i class="bi bi-code"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="card border-info">
+                    <img class="img-fluid" src="{{url_for('static',filename='images/portfolio.png')}}" alt="">
+                    <div class="card-header">
+                        <h4>Web Portfolio</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="badge bg-info rounded-pill">
+                            Python
+                        </p>
+                        <p class="badge bg-info rounded-pill">
+                            Flask
+                        </p>
+                        <p class="badge bg-info rounded-pill">
+                            Bootstrap
+                        </p>
+                        <p class="badge rounded-pill bg-info">JavaScript</p>                        
+                    </div>
+                    <div class="card-footer">
+                        <a class="text-decoration-none text-secondary" href="#" target="_blank">Source Code <i class="bi bi-code"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div class="card border-info">
+                    <img src="{{url_for('static',filename='images/afro3.jpg')}}" alt="">
+                    <div class="card-header">
+                        <h4>React App</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="badge rounded-pill bg-info">React</p>
+                        <p class="badge rounded-pill bg-info">JSon</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="text-decoration-none text-secondary" href="https://github.com/teydd/reactapp" target="_blank
+                        ">Source Code <i class="bi bi-code"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    </section>
+
+    <section id="contact">
+        <div class="container-lg bg-white my-5 text-center">
+            <i class="bi bi-person-lines-fill fs-3 text-info"></i>
+
+            <h3>CONTACT</h3>
+            <p class="lead">In need of a FullStack Web Developer?</p>
+            <p class="lead">Flexible working conditions <em class="fw-bold">i.e. Can work remotely, onsite or hybrid</em></p>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-6">
+                <div style="margin-bottom: 40px;" id="map">map</div>
+            </div>
+            <div class="col-sm-6">
+                <h5>
+                    <div><i class="bi bi-geo-alt"></i>
+                        Address<Address>Nairobi, Kenya</Address></div>
+                </h5>
+                <h5>
+                    <div><i class="bi bi-telephone"></i>
+                        Phone Number</div>
+                    <p class="lead">+25492756844</p>
+                </h5>   
+                <h5>
+                    <div><i class="bi bi-envelope"></i>
+                        Email</div>
+                    <a class="text-decoration-none text-secondary" href="https://mail.google.com">chemosted@gmail.com</a>
+                </h5>
+                <h5>
+                    <div><i class="bi bi-github"></i>
+                        GitHub</div>
+                    <a class="text-decoration-none text-secondary" href="https://github.com/teydd">GitHub</a>
+                </h5>             
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+</html>
