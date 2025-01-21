@@ -36,7 +36,17 @@
                                     <a href="#about" class="nav-link">ABOUT</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#projects" class="nav-link">PROJECTS</a>
+                                    <a href="#projects" class="nav-link dropdown dropdown-toggle" data-bs-toggle="dropdown">PROJECTS</a>
+                                    <div class="dropdown">
+                                        <ul class="dropdown-menu border-info">
+                                            <li class="dropdown-item">
+                                                <a class="nav-link fw-bold" href="#websites">WEBSITES</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <a class="fw-bold nav-link" href="#python">PYTHON PROJECTS</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#contact" class="nav-link">CONTACT</a>
@@ -98,7 +108,8 @@
         <h3 class="text-center">PROJECTS</h3>
         <p class="lead text-center">View some of my latest projects</p>
         
-        <div class="row">
+        <div class="row" id="websites">
+            <h3 class="text-decoration-underline text-secondary mb-3 text-center">WEBSITES</h3>
             <div class="col-sm-4 text-center">
                 <div class="card border-info">
                     <img class="img-fluid" src="{{url_for('static',filename='images/samurai.png')}}" alt="">
@@ -159,7 +170,27 @@
                     </div>
                 </div>
             </div>
+        </div></br>
 
+        <div id="python" class="row">
+            <h3 class="text-decoration-underline text-secondary text-center mb-3">PYTHON PROJECTS</h3></br>
+            <div class="col-sm-4 text-center">
+                <div class="card border-info">
+                    <img src="{{url_for('static',filename='images/afro3.jpg')}}" alt="">
+                    <div class="card-header">
+                        <h4>DRIVER DROWSINESS DETECTION SYSTEM</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="badge rounded-pill bg-info">
+                            Python
+                        </p>
+                        <p class="badge bg-info rounded-pill">Open CV</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/teydd/dds" target="_blank" class="text-decoration-none text-secondary text-center">Source Code</a>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
